@@ -2,10 +2,10 @@ import React from "react";
 import TicketList from "./TicketList";
 import Header from "./Header";
 
-function App(props){
+function App(props) {
   return (
     <div>
-      <Header/>
+      <Header />
       <TicketList />
     </div>
   );
