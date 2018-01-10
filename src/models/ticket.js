@@ -6,12 +6,11 @@ class Ticket {
     this.location = location;
     this.issue = issue;
     this.timeOpened = new Moment();
-    this.timeSinceOpened = this.setTimeSinceOpened();
-    console.log(this.timeSinceOpened);
+    this.timeSinceOpened = "a few seconds";
   }
 
   setTimeSinceOpened() {
-    return this.timeOpened.fromNow(true);
+    this.timeSinceOpened = this.timeOpened.fromNow(true);
   }
 }
 
