@@ -4,7 +4,9 @@
   "description": "Just learning some react, nothing to see here",
   "main": "index.js",
   "scripts": {
-    "start": "webpack && webpack-dev-server",
+    "test": "jest --watchAll",
+    "start": "webpack-dev-server",
+    "build": "webpack",
     "lint": "eslint src/** src/**/**; exit 0"
   },
   "author": "",
