@@ -1,6 +1,7 @@
 import React from "react";
 import TicketList from "./TicketList";
 import NewTicketControl from "./NewTicketControl";
+import {connect} from "react-redux";
 
 class Queue extends React.Component {
 
@@ -10,6 +11,7 @@ class Queue extends React.Component {
       masterTicketList: []
     };
     this.addNewTicketToList = this.addNewTicketToList.bind(this);
+    this.updateTicketTimeSinceOpened = this.updateTicketTimeSinceOpened.bind(this);
   }
 
   componentDidMount() {
@@ -44,4 +46,11 @@ class Queue extends React.Component {
   }
 }
 
-export default Queue;
+const mapStateToProps = state => {
+  console.log(state);
+  return {
+    masterTicketList : state
+  }
+}
+
+export default connect(mapStateToProps)(Queue);
